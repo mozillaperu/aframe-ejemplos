@@ -1,17 +1,17 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
-    </head>
-    <body>
-        <a-scene>
-            <a-sphere radius="2" src="texture.jpg" rotation="45 90 180" position="1 1 0"></a-sphere>
-            
-            <a-sky color="#ECECEC"></a-sky>
-            
-            <a-entity position="0 0 3.8">
-                <a-camera></a-camera>
-            </a-entity>
-        </a-scene>
-    </body>
-</html>
+<head>
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-sphere radius="1" src="images/planisferio.gif" position="0 1.5 -1.5">
+        <a-animation repeat="indefinite" attribute="rotation" from="0 0 23.5" to="0 360 23.5" direction="forward"
+                     easing="linear"
+                     dur="3000"></a-animation>
+    </a-sphere>
 
+    <!--<a-sky src="images/espacio.jpg"></a-sky>-->
+</a-scene>
+</body>
+</html>
