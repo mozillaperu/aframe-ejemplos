@@ -3,17 +3,26 @@
     <head>
         <title>My A-Frame Scene</title>
         <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-        <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
     </head>
     <body>
         <a-scene>
-            <a-entity position="0 -0.44 0" bmfont-text="text:Hello world;align:;letterSpacing:3.48;lineHeight:35.96;color:#a5b43e;opacity:1" scale="1 1.8599999999999999 1"></a-entity>
+            <a-text value="moz://a/pe" position="0 2 -1.5" font="monoid"
+                color="#da0f0f" align="center" width="10"></a-text>
+            <a-text value="moz://a/pe" position="0.02 2.02 -1.52" font="monoid"
+                color="#400" align="center" width="10"></a-text>
+
+            <a-text value="Mozilla Peru" position="0 1.5 -1.5" font="mozillavr"
+                color="#400" align="center" width="10"></a-text>
+
+            <a-text value="https://www.mozilla.pe" position="0 1.8 5"
+                font="monoid" color="#FFF" align="center" width="10"
+                rotation="0 180 0"></a-text>
+            <a-text value="https://www.mozilla.pe" position="0.02 1.82 5.02"
+                font="monoid" color="#DDD" align="center" width="10"
+                rotation="0 180 0"></a-text>
         
-            <a-sky color="#ECECEC"></a-sky>
-            
-            <a-entity position="0 0 3">
-                <a-camera></a-camera>
-            </a-entity>
+            <a-sky color="#CCC"></a-sky>
         </a-scene>
     </body>
 </html>
+
