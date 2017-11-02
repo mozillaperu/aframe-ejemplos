@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-assset-item id="fox-1-obj" src="obj/fox-1/model.obj"></a-asset-item>
+                <a-assset-item id="fox-1-mtl" src="obj/fox-1/materials.mtl"></a-asset-item>
+                <a-assset-item id="fox-2-obj" src="obj/fox-2/Fox.obj"></a-asset-item>
+                <a-assset-item id="fox-2-mtl" src="obj/fox-2/Fox.mtl"></a-asset-item>
+                <a-assset-item id="fox-head-obj" src="obj/fox-head/model.obj"></a-asset-item>
+                <a-assset-item id="fox-head-mtl" src="obj/fox-head/materials.mtl"></a-asset-item>
+            </a-assets>
+            
+            <a-sky color="#ADF"></a-sky>
+            
+            <a-plane color="#0F5" height="1" width="1" rotation="-90 0 0" scale="50 50 1"></a-plane>
+
+            <a-obj-model src="#fox-1-obj" mtl="#fox-1-mtl" position="1 1.5 -2" scale="0.5 0.5 0.5" rotation="0 120 0"></a-obj-model>
+            
+            <a-obj-model src="#fox-2-obj" mtl="#fox-2-mtl" position="-2 0.3 -3" scale="0.5 0.5 0.5" rotation="0 45 0"></a-obj-model>
+
+            <a-obj-model src="#fox-head-obj" mtl="#fox-head-mtl" position="0 1.5 2" scale="2 2 2" rotation="0 0 0"></a-obj-model>
+        </a-scene>
+    </body>
+</html>
+
