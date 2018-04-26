@@ -8,12 +8,15 @@
     <body>
         <a-scene>
             <a-assets>
-                <a-assset-item id="fox-1-obj" src="obj/fox-1/model.obj"></a-asset-item>
-                <a-assset-item id="fox-1-mtl" src="obj/fox-1/materials.mtl"></a-asset-item>
-                <a-assset-item id="fox-2-obj" src="obj/fox-2/Fox.obj"></a-asset-item>
-                <a-assset-item id="fox-2-mtl" src="obj/fox-2/Fox.mtl"></a-asset-item>
-                <a-assset-item id="fox-head-obj" src="obj/fox-head/model.obj"></a-asset-item>
-                <a-assset-item id="fox-head-mtl" src="obj/fox-head/materials.mtl"></a-asset-item>
+                <a-asset-item id="fox-1-obj" src="obj/fox-1/model.obj"></a-asset-item>
+                <a-asset-item id="fox-1-mtl" src="obj/fox-1/materials.mtl"></a-asset-item>
+                <a-asset-item id="fox-2-obj" src="obj/fox-2/Fox.obj"></a-asset-item>
+                <a-asset-item id="fox-2-mtl" src="obj/fox-2/Fox.mtl"></a-asset-item>
+                <a-asset-item id="fox-head-obj" src="obj/fox-head/model.obj"></a-asset-item>
+                <a-asset-item id="fox-head-mtl" src="obj/fox-head/materials.mtl"></a-asset-item>
+
+                <a-mixin id="link-text" text="value: moz://a/pe; side: double; font: monoid; align: center; width: 10"></a-mixin>
+                <a-mixin id="moz-url" text="value: https://www.mozilla.pe; side: double; font: monoid; align: center; width: 10;" rotation="0 180 0"></a-mixin>
             </a-assets>
 
             <a-entity environment="preset: forest"></a-entity>
@@ -22,11 +25,11 @@
             <a-obj-model src="#fox-2-obj" mtl="#fox-2-mtl" position="-3.5 0.3 -3.5" scale="0.5 0.5 0.5" rotation="0 45 0"></a-obj-model>
             <a-obj-model src="#fox-head-obj" mtl="#fox-head-mtl" position="0 2.15 2" scale="2 2 2" rotation="0 0 0"></a-obj-model>
 
-            <a-text value="moz://a/pe" position="0 2 -1.5" font="monoid"color="#da0f0f" align="center" width="10"></a-text>
-            <a-text value="moz://a/pe" position="0.02 2.02 -1.52" font="monoid" color="#400" align="center" width="10"></a-text>
-            <a-text value="Mozilla Peru" position="0 1.5 -1.5" font="mozillavr" color="#400" align="center" width="10"></a-text>
-            <a-text value="https://www.mozilla.pe" position="0 1.4 5" font="monoid" color="#FFF" align="center" width="10" rotation="0 180 0"></a-text>
-            <a-text value="https://www.mozilla.pe" position="0.02 1.42 5.02" font="monoid" color="#DDD" align="center" width="10" rotation="0 180 0"></a-text>
+            <a-text mixin="link-text" position="0 2 -1.5" color="#da0f0f"></a-text>
+            <a-text mixin="link-text" position="0.02 2.02 -1.52" color="#400"></a-text>
+            <a-text value="Mozilla Peru" position="0 1.5 -1.5" side="double" font="mozillavr" color="#400" align="center" width="10"></a-text>
+            <a-text mixin="moz-url" position="0 1.4 5" color="#FFF"></a-text>
+            <a-text mixin="moz-url" position="0.02 1.42 5.02" color="#DDD"></a-text>
         </a-scene>
     </body>
 </html>
