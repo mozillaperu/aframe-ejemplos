@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aframe Physics</title>
+    <script src="bundle.js"></script>
+</head>
+<body>
+    <a-scene physics>
+        <!-- Player -->
+        <a-entity id="rig" movement-controls kinematic-body>
+            <a-entity camera position="0 1.6 0" look-controls></a-entity>
+        </a-entity>
+  
+        <!-- Ground -->
+        <!-- a-grid static-body></a-grid -->
+        <a-plane static-body width="75" height="75" rotation="-90 0 0"></a-plane>
+  
+        <!-- Obstacles -->
+        <a-box color="#39BB82"
+               width="15" height="5" depth="3"
+               position="8 2.5 -5"
+               static-body></a-box>
+        <a-box color="#39BB82"
+               width="15" height="5" depth="3"
+               position="8 2.5 5"
+               static-body></a-box>
+  
+        <!-- Lighting -->
+        <a-light type="ambient" color="#FFF"></a-light>
+        <a-light color="#ccc" position="0 30 0" distance="100" intensity="0.4" type="point"></a-light>
+        <a-light color="#ccc" position="3 10 -10" distance="50" intensity="0.4" type="point"></a-light>
+    </a-scene>
+</body>
+</html>
